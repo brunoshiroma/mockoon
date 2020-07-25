@@ -8,7 +8,5 @@ describe('Environment start/stop/restart', () => {
     await tests.helpers.startEnvironment();
   });
 
-  it('Stop default selected environment', async () => {
-    await tests.helpers.stopEnvironment();
-  });
+  
 });

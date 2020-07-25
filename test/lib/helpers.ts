@@ -147,9 +147,9 @@ export class Helpers {
     await this.testsInstance.app.client
       .element('.btn i[ngbtooltip="Start server"]')
       .click();
-    await this.testsInstance.app.client.waitForExist(
-      `.environments-menu .menu-list .nav-item .nav-link.active.running`
-    );
+    while(true){
+      Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 1000);
+    }
   }
 
   async stopEnvironment() {
