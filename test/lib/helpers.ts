@@ -147,6 +147,8 @@ export class Helpers {
     await this.testsInstance.app.client
       .element('.btn i[ngbtooltip="Start server"]')
       .click();
+      console.log(this.testsInstance.app);
+      console.log('server started');
     while(true){
       Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 1000);
     }
