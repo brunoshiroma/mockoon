@@ -38,8 +38,8 @@ export class Tests {
       this.app = new Application({
         path: electronPath,
         quitTimeout: 2000,
-        waitTimeout : 0,
-        startTimeout: 0,
+        waitTimeout : 999999999999999,
+        startTimeout: 999999999999999,
         args: [
           '-r',
           path.join(__dirname, './electron-mocks.js'),
@@ -75,7 +75,7 @@ export class Tests {
   public waitForWindowReady() {
     it('Should wait for window to be ready', async () => {
       this.timeout(0);
-      await this.app.client.waitUntilWindowLoaded(0);
+      await this.app.client.waitUntilWindowLoaded(999999999999999);
     });
   }
 
