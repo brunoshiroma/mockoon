@@ -73,7 +73,7 @@ export class Tests {
   public waitForWindowReady() {
     it('Should wait for window to be ready', async () => {
       this.timeout(0);
-      await this.app.client.waitUntilWindowLoaded();
+      await this.app.client.waitUntilWindowLoaded(0);
     });
   }
 
