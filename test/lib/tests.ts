@@ -38,6 +38,7 @@ export class Tests {
       this.app = new Application({
         path: electronPath,
         quitTimeout: 2000,
+        waitTimeout : 99999,
         args: [
           '-r',
           path.join(__dirname, './electron-mocks.js'),
